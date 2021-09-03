@@ -116,11 +116,8 @@ extension InterfaceController: WCSessionDelegate {
   }
     
     func session(_ session: WCSession, didReceive file: WCSessionFile) {
-        print("roryclear....file receive started")
-        self.moviePlayer.setMovieURL(file.fileURL)
-        print("roryclear...FILE RECEIVED")
-        
         do {
+            deleteAllMp4s()
             let receivedData = try Data(contentsOf: file.fileURL)
             
             let path = FileManager.default.urls(for: .documentDirectory,
