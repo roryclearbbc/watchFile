@@ -7,6 +7,7 @@
 
 import UIKit
 import WatchConnectivity
+import mobileffmpeg
 
 class ViewController: UIViewController {
     
@@ -42,6 +43,38 @@ class ViewController: UIViewController {
             }
         } catch  { print(error) }
         
+    }
+    
+    func ffmpegDownload(){
+        let documentsUrl:URL =  (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first as URL?)!
+        let destinationFileUrl = documentsUrl.appendingPathComponent("ffmpegFile.mp4")
+        let stringPath = "\(destinationFileUrl)"
+        
+        var command = "-i https://vod-hls-uk.live.cf.md.bbci.co.uk/usp/auth/vod/piff_abr_full_hd/99f2f2-p09tv3z0/vf_p09tv3z0_8e28d952-3729-4f5b-b383-f42e1bd65b3f.ism/vf_p09tv3z0_8e28d952-3729-4f5b-b383-f42e1bd65b3f-audio_eng=96000-video=827000.m3u8 -bsf:a aac_adtstoasc -vcodec copy -c copy -y -crf 50 "
+        
+        command = command + stringPath
+        
+        // Do any additional setup after loading the view.
+        //let a = MobileFFmpeg.execute("-i https://b1-mcsqb-bbc.live.bidi.net.uk/vod-hls-uk/usp/auth/vod/piff_abr_full_hd/3bfc98-m000ywfg/vf_m000ywfg_f6ade506-8219-470f-97d5-adcbabf8bc9f.ism/vf_m000ywfg_f6ade506-8219-470f-97d5-adcbabf8bc9f-audio_eng=48000-video=281000.m3u8 -bsf:a aac_adtstoasc -vcodec copy -c copy -crf 50 output.mp4")
+        
+        let a = MobileFFmpeg.execute(command)
+        
+        //check file size???
+        
+        var fileSize : UInt64
+
+        do {
+            //return [FileAttributeKey : Any]
+            let attr = try FileManager.default.attributesOfItem(atPath: stringPath)
+            fileSize = attr[FileAttributeKey.size] as! UInt64
+
+            //if you convert to NSDictionary, you can get file size old way as well.
+            let dict = attr as NSDictionary
+            fileSize = dict.fileSize()
+            print("roryclear file size = ",fileSize)
+        } catch {
+            print("Error: \(error)")
+        }
     }
     
     
