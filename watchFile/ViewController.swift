@@ -96,6 +96,18 @@ class ViewController: UIViewController {
                     //transfer file not data???
                     print("roryclear file transfer started")
                     validSession.transferFile(pathURL!, metadata: ["iPhone":"hello rory \(Int.random(in: 1..<10000))"])
+                    var progress: Int64 = -1
+                    if(self.session?.outstandingFileTransfers != nil)
+                    {
+                        while (self.session?.outstandingFileTransfers.count)! > 0 && (self.session?.outstandingFileTransfers[0].progress.completedUnitCount)! < 100 {
+                            if(self.session?.outstandingFileTransfers[0].progress.completedUnitCount != progress)
+                            {
+                            print("roryclear trasfer prog? -> \(self.session?.outstandingFileTransfers[0].progress.completedUnitCount)")
+                                progress = (self.session?.outstandingFileTransfers[0].progress.completedUnitCount)!
+                            }
+                        
+                    }
+                    }
     
                     print("roryclear file transfered?")
                     
