@@ -110,10 +110,6 @@ class ViewController: UIViewController {
     @IBAction func tapSendDataToWatch(_ sender: Any) {
         print("roryclear send2watch?")
         
-        //delete original file??
-        deleteAllMp4s()
-        
-        
         //download mp4
         /*
         let documentsUrl:URL =  (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first as URL?)!
@@ -147,6 +143,10 @@ class ViewController: UIViewController {
             */
             if let validSession = self.session, validSession.isReachable {//5.1
                 print("roryclear validSession?")
+                
+                //delete original file??
+                deleteAllMp4s()
+                //download mp4
                 ffmpegDownload()
              // let data: [String: Any] = ["iPhone": "Data from iPhone" as Any] // Create your Dictionay as per uses
              //   NSString  *filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory,@"filename.mp4"];
@@ -172,7 +172,7 @@ class ViewController: UIViewController {
                             while (self.session?.outstandingFileTransfers.count)! > 0 && (self.session?.outstandingFileTransfers[0].progress.completedUnitCount)! < 100 {
                                 if let oft = self.session?.outstandingFileTransfers[0]
                                 {
-                                    print("roryclear downloading \(oft.progress.completedUnitCount)")
+                                    print("roryclear downloading \(oft.progress.totalUnitCount)")
                                 }
           /*                  if(self.session?.outstandingFileTransfers[0].progress.completedUnitCount != progress)
                             {
