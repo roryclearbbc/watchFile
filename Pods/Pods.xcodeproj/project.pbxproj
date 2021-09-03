@@ -1,0 +1,979 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		A4CF1A2B7EFA48AA7D1DFC45FA6B1E5C /* mobile-ffmpeg-full */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 797E3892A9E731F1BE505B941C2067A6 /* Build configuration list for PBXAggregateTarget "mobile-ffmpeg-full" */;
+			buildPhases = (
+				25DCD786C43D49D3F2ED58F8B404DA05 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+			);
+			name = "mobile-ffmpeg-full";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0AA016BB61B76840BDB172C071DCCB79 /* Pods-watchFile-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AF592502FBF0C7E3B18DB20B65605B1 /* Pods-watchFile-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		256923CDE12B25B1B71A2637563A0342 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE35B7430FD7C91E8CC808A3540CF2E /* Foundation.framework */; };
+		31F5107B1899854D1466FFDDDA3D5B48 /* Pods-watchFile WatchKit App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDD03B6C61BCD63CF6EAC3DEEF8521A /* Pods-watchFile WatchKit App-dummy.m */; };
+		35D3AA993F86E79EFB1B24F8F46B8BCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE35B7430FD7C91E8CC808A3540CF2E /* Foundation.framework */; };
+		676FD761B91ED27B5F3ECF55C9BB65E4 /* Pods-watchFile WatchKit Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A71D786B8F62A1E33FC192001F9FC35D /* Pods-watchFile WatchKit Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		816D3E7045CF144C84F3B783C6794932 /* Pods-watchFile WatchKit Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B4166BA8477277838A996A744B9FF3 /* Pods-watchFile WatchKit Extension-dummy.m */; };
+		BB15471ECE83309832303B1CF31D543D /* Pods-watchFile-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D7B30F88F90CC1D22E13A114B59172 /* Pods-watchFile-dummy.m */; };
+		C30BCF3C59C17859B19A31EB16483DD6 /* Pods-watchFile WatchKit App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B8CEE8562D7CDAAB49B1657C16CD0790 /* Pods-watchFile WatchKit App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4044A7C512AEC00AEC23397FD122879 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0A982A9433AACEF8A61353293CF443 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		79D5F37EC7AF02ED4DA3F021734C727A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4CF1A2B7EFA48AA7D1DFC45FA6B1E5C;
+			remoteInfo = "mobile-ffmpeg-full";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0206C52608A4F41E2A437F342A928278 /* Pods-watchFile WatchKit Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-watchFile WatchKit Extension.modulemap"; sourceTree = "<group>"; };
+		034D68B18C804DD5C03CC2311A4A86B7 /* Pods_watchFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_watchFile.framework; path = "Pods-watchFile.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0363DA821CC331CCBC29A0930710A34A /* Pods-watchFile-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-watchFile-acknowledgements.plist"; sourceTree = "<group>"; };
+		09872F36CF69EA505A518699F41E3A6A /* soxr.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = soxr.xcframework; sourceTree = "<group>"; };
+		109BE396DFA254FCB0DBCE5D88920A14 /* libvorbisfile.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libvorbisfile.xcframework; sourceTree = "<group>"; };
+		1125AF65046227ABBDD829C61B7D0F84 /* freetype.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = freetype.xcframework; sourceTree = "<group>"; };
+		18E65CB6E7DABDC4F2D63A66EA4C3A6F /* libass.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libass.xcframework; sourceTree = "<group>"; };
+		1916A4BF2463A0F0F6D66C92EFEF0885 /* Pods-watchFile-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-watchFile-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1B98AE8E8371B37DF9F8BDD8E93D8911 /* kvazaar.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = kvazaar.xcframework; sourceTree = "<group>"; };
+		225BA1606C69E9DABAB62BDF6463720F /* fontconfig.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = fontconfig.xcframework; sourceTree = "<group>"; };
+		24BF7803AABECAC1B53E2772BD63E1BF /* gnutls.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = gnutls.xcframework; sourceTree = "<group>"; };
+		2D899463C0A313DBB09387D46F5EF2D7 /* libogg.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libogg.xcframework; sourceTree = "<group>"; };
+		39016955DCCC9052F482F008543D1A0B /* libwebpdemux.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libwebpdemux.xcframework; sourceTree = "<group>"; };
+		3EC4F557A2E411AE5878320D6F05056B /* libavutil.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libavutil.xcframework; sourceTree = "<group>"; };
+		4488FDDD1D8ED0ACC9252AC03553FE67 /* Pods-watchFile WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-watchFile WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		452C57081B515B712D674BFB27242555 /* libilbc.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libilbc.xcframework; sourceTree = "<group>"; };
+		45D7B30F88F90CC1D22E13A114B59172 /* Pods-watchFile-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-watchFile-dummy.m"; sourceTree = "<group>"; };
+		4A64959A2897095C4D474503C22A1AEC /* libvpx.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libvpx.xcframework; sourceTree = "<group>"; };
+		4B11AA310FD8C2F65E8DD40B9E33B1FB /* snappy.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = snappy.xcframework; sourceTree = "<group>"; };
+		54B5629C28FCE40A2B05C20442811E8F /* libnettle.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libnettle.xcframework; sourceTree = "<group>"; };
+		5720DC19D4CC530D40F5D24C75375851 /* libvorbis.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libvorbis.xcframework; sourceTree = "<group>"; };
+		585F9C63CA9A39D20BD0A520EBC59FF1 /* fribidi.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = fribidi.xcframework; sourceTree = "<group>"; };
+		5BFAA5E04A1A134E4E0E60C9BA1C5EBC /* Pods-watchFile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-watchFile.release.xcconfig"; sourceTree = "<group>"; };
+		5D0A982A9433AACEF8A61353293CF443 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5E4E0C0D46338249A0220742FE0D1BF0 /* libtheoraenc.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libtheoraenc.xcframework; sourceTree = "<group>"; };
+		5E81E63DA8E2707DA96AE0EBF810EF3E /* Pods-watchFile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-watchFile.debug.xcconfig"; sourceTree = "<group>"; };
+		5FD4EE4C3733BAFADB927B27C080E895 /* Pods-watchFile.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-watchFile.modulemap"; sourceTree = "<group>"; };
+		623EB70BFE6CD11FBF9D4461967ABDBC /* libopencore-amrnb.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = "libopencore-amrnb.xcframework"; sourceTree = "<group>"; };
+		62D7F3160F073681A2E43D918F101EEA /* libvorbisenc.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libvorbisenc.xcframework; sourceTree = "<group>"; };
+		65044CA84BE1A61B39DBDD155C3CEA97 /* libavfilter.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libavfilter.xcframework; sourceTree = "<group>"; };
+		67222630E5F1B1750CD8A71ABB1654AF /* Pods-watchFile WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-watchFile WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		6BB8A8828E73A5F1948884179AFF51D0 /* lame.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = lame.xcframework; sourceTree = "<group>"; };
+		6EB9100016F5FAA16C0115006A36F38E /* Pods-watchFile WatchKit Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-watchFile WatchKit Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		760CAF9AB9B61B278A002F8D03CCCAE1 /* Pods_watchFile_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_watchFile_WatchKit_Extension.framework; path = "Pods-watchFile WatchKit Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7779984E194334578A8E9D54C3519F59 /* libwebpmux.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libwebpmux.xcframework; sourceTree = "<group>"; };
+		78ABF8C14708FF14224636001811AC02 /* Pods_watchFile_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_watchFile_WatchKit_App.framework; path = "Pods-watchFile WatchKit App.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ADB0A3A2D3B646AAEF6DA34111FF5B3 /* Pods-watchFile-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-watchFile-Info.plist"; sourceTree = "<group>"; };
+		7AF592502FBF0C7E3B18DB20B65605B1 /* Pods-watchFile-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-watchFile-umbrella.h"; sourceTree = "<group>"; };
+		7D56D2978D15B7D26E283A40D0B9B1D1 /* Pods-watchFile WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-watchFile WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		7DDF5C61C9D2C86B488364DC999C2CB7 /* libswscale.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libswscale.xcframework; sourceTree = "<group>"; };
+		83B34FAA4996A362BE29700344BDBECF /* gmp.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = gmp.xcframework; sourceTree = "<group>"; };
+		851E7CDF42155C6892A7BD2D8AAAF602 /* mobileffmpeg.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = mobileffmpeg.xcframework; sourceTree = "<group>"; };
+		85FCD3AED7AC07D02B8384F53FC9CD6C /* Pods-watchFile WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-watchFile WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		87403F605D9CBB9F02C0F4FE28A53859 /* speex.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = speex.xcframework; sourceTree = "<group>"; };
+		8C8BDDBEF8CDCD280390A2D751DFAD8F /* Pods-watchFile WatchKit App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-watchFile WatchKit App.modulemap"; sourceTree = "<group>"; };
+		97ABFCFD31911C9FD44AD7331EF919C4 /* giflib.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = giflib.xcframework; sourceTree = "<group>"; };
+		9855F377C9571EA1C68B4E26A5C41A4E /* twolame.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = twolame.xcframework; sourceTree = "<group>"; };
+		9CA20ED7E88E0F7A3CB81C295038A340 /* vo-amrwbenc.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = "vo-amrwbenc.xcframework"; sourceTree = "<group>"; };
+		9D3B7D93ED5599E33D4FFE87F8E66BE1 /* libavcodec.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libavcodec.xcframework; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3A2B1DB2FA3233BF622DD29961D389D /* libxml2.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libxml2.xcframework; sourceTree = "<group>"; };
+		A71D786B8F62A1E33FC192001F9FC35D /* Pods-watchFile WatchKit Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-watchFile WatchKit Extension-umbrella.h"; sourceTree = "<group>"; };
+		AA67DE5F025EDCB24BFA9D6841077620 /* libswresample.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libswresample.xcframework; sourceTree = "<group>"; };
+		AB30E427771E97042DB275099CE4CBAA /* wavpack.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = wavpack.xcframework; sourceTree = "<group>"; };
+		AEA2C74F9A7C2D4A5F663C02F357953F /* libwebp.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libwebp.xcframework; sourceTree = "<group>"; };
+		B7B4166BA8477277838A996A744B9FF3 /* Pods-watchFile WatchKit Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-watchFile WatchKit Extension-dummy.m"; sourceTree = "<group>"; };
+		B8CEE8562D7CDAAB49B1657C16CD0790 /* Pods-watchFile WatchKit App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-watchFile WatchKit App-umbrella.h"; sourceTree = "<group>"; };
+		B8D634456C2E210E0383AE64B6DEEFEF /* libtheora.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libtheora.xcframework; sourceTree = "<group>"; };
+		BE5F07AE8A74ED99057145A07166FD9F /* tiff.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = tiff.xcframework; sourceTree = "<group>"; };
+		C3ACEF7524BAC805FDEB8529402F6A20 /* mobile-ffmpeg-full.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "mobile-ffmpeg-full.release.xcconfig"; sourceTree = "<group>"; };
+		C52128611ED1EB2304460D5C8A82AEEF /* libaom.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libaom.xcframework; sourceTree = "<group>"; };
+		C87B90FB2E956D519CC5E71A377EA0E7 /* libhogweed.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libhogweed.xcframework; sourceTree = "<group>"; };
+		C8C632398C13F5E19B3FCFFC975E43EB /* libpng.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libpng.xcframework; sourceTree = "<group>"; };
+		CCDD03B6C61BCD63CF6EAC3DEEF8521A /* Pods-watchFile WatchKit App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-watchFile WatchKit App-dummy.m"; sourceTree = "<group>"; };
+		D691B25FA432A5AF2C77D170E05317D7 /* libavformat.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libavformat.xcframework; sourceTree = "<group>"; };
+		D6E8BD1A0EDA28F6468C6A7624EAC230 /* jpeg.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = jpeg.xcframework; sourceTree = "<group>"; };
+		DC27B3B7F383EA4F98FD423939D9B27C /* Pods-watchFile WatchKit Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-watchFile WatchKit Extension-acknowledgements.plist"; sourceTree = "<group>"; };
+		DEFD3C0DC9005DAFA9F7CA4A11618EE0 /* shine.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = shine.xcframework; sourceTree = "<group>"; };
+		E36BDBD49C29B9E1BE3E4F3599068A2C /* Pods-watchFile WatchKit App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-watchFile WatchKit App-acknowledgements.plist"; sourceTree = "<group>"; };
+		E41708A425423AE7EBBD12DA15843EC1 /* Pods-watchFile WatchKit Extension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-watchFile WatchKit Extension-Info.plist"; sourceTree = "<group>"; };
+		E4B727DC3BBFE0D14571CE8F61D407AF /* mobile-ffmpeg-full-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "mobile-ffmpeg-full-xcframeworks.sh"; sourceTree = "<group>"; };
+		E5B707B05917EEC2B814C3E7A0BB30F8 /* libavdevice.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libavdevice.xcframework; sourceTree = "<group>"; };
+		E9AC4196576563C1B16FC409CFC1E83E /* libsndfile.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libsndfile.xcframework; sourceTree = "<group>"; };
+		ED8EDB79400248882DBA81A074CC4AA9 /* opus.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = opus.xcframework; sourceTree = "<group>"; };
+		F00717AF0EDB1C459ADBDFACC3DCECEF /* expat.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = expat.xcframework; sourceTree = "<group>"; };
+		F05BC8F343F19E283C35BCE0CF48C8DC /* Pods-watchFile WatchKit App-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-watchFile WatchKit App-Info.plist"; sourceTree = "<group>"; };
+		FB7CD821744EDB2342019E1F7873E2EB /* libtheoradec.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = libtheoradec.xcframework; sourceTree = "<group>"; };
+		FCE35B7430FD7C91E8CC808A3540CF2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		FE7E334A78E7D37D6026796B5EE109C5 /* mobile-ffmpeg-full.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "mobile-ffmpeg-full.debug.xcconfig"; sourceTree = "<group>"; };
+		FFCB1A9A2ECDEF75865D3C35294F9427 /* Pods-watchFile WatchKit App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-watchFile WatchKit App-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C5046500CA566F2519FDD1878AC0F7B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4044A7C512AEC00AEC23397FD122879 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAAF64AB99434D1BC4B35979A5DC88BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35D3AA993F86E79EFB1B24F8F46B8BCC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECD7A79A058AB0887B20CC2818E4B63D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				256923CDE12B25B1B71A2637563A0342 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03FBABE5ACCBF0D21AB61D364299D310 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5D0A982A9433AACEF8A61353293CF443 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		144FCF9902DD8E6DD64B290F5E76585A /* Pods-watchFile */ = {
+			isa = PBXGroup;
+			children = (
+				5FD4EE4C3733BAFADB927B27C080E895 /* Pods-watchFile.modulemap */,
+				1916A4BF2463A0F0F6D66C92EFEF0885 /* Pods-watchFile-acknowledgements.markdown */,
+				0363DA821CC331CCBC29A0930710A34A /* Pods-watchFile-acknowledgements.plist */,
+				45D7B30F88F90CC1D22E13A114B59172 /* Pods-watchFile-dummy.m */,
+				7ADB0A3A2D3B646AAEF6DA34111FF5B3 /* Pods-watchFile-Info.plist */,
+				7AF592502FBF0C7E3B18DB20B65605B1 /* Pods-watchFile-umbrella.h */,
+				5E81E63DA8E2707DA96AE0EBF810EF3E /* Pods-watchFile.debug.xcconfig */,
+				5BFAA5E04A1A134E4E0E60C9BA1C5EBC /* Pods-watchFile.release.xcconfig */,
+			);
+			name = "Pods-watchFile";
+			path = "Target Support Files/Pods-watchFile";
+			sourceTree = "<group>";
+		};
+		3C35AFEAB8715E0562808E3A0699720A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F00717AF0EDB1C459ADBDFACC3DCECEF /* expat.xcframework */,
+				225BA1606C69E9DABAB62BDF6463720F /* fontconfig.xcframework */,
+				1125AF65046227ABBDD829C61B7D0F84 /* freetype.xcframework */,
+				585F9C63CA9A39D20BD0A520EBC59FF1 /* fribidi.xcframework */,
+				97ABFCFD31911C9FD44AD7331EF919C4 /* giflib.xcframework */,
+				83B34FAA4996A362BE29700344BDBECF /* gmp.xcframework */,
+				24BF7803AABECAC1B53E2772BD63E1BF /* gnutls.xcframework */,
+				D6E8BD1A0EDA28F6468C6A7624EAC230 /* jpeg.xcframework */,
+				1B98AE8E8371B37DF9F8BDD8E93D8911 /* kvazaar.xcframework */,
+				6BB8A8828E73A5F1948884179AFF51D0 /* lame.xcframework */,
+				C52128611ED1EB2304460D5C8A82AEEF /* libaom.xcframework */,
+				18E65CB6E7DABDC4F2D63A66EA4C3A6F /* libass.xcframework */,
+				9D3B7D93ED5599E33D4FFE87F8E66BE1 /* libavcodec.xcframework */,
+				E5B707B05917EEC2B814C3E7A0BB30F8 /* libavdevice.xcframework */,
+				65044CA84BE1A61B39DBDD155C3CEA97 /* libavfilter.xcframework */,
+				D691B25FA432A5AF2C77D170E05317D7 /* libavformat.xcframework */,
+				3EC4F557A2E411AE5878320D6F05056B /* libavutil.xcframework */,
+				C87B90FB2E956D519CC5E71A377EA0E7 /* libhogweed.xcframework */,
+				452C57081B515B712D674BFB27242555 /* libilbc.xcframework */,
+				54B5629C28FCE40A2B05C20442811E8F /* libnettle.xcframework */,
+				2D899463C0A313DBB09387D46F5EF2D7 /* libogg.xcframework */,
+				623EB70BFE6CD11FBF9D4461967ABDBC /* libopencore-amrnb.xcframework */,
+				C8C632398C13F5E19B3FCFFC975E43EB /* libpng.xcframework */,
+				E9AC4196576563C1B16FC409CFC1E83E /* libsndfile.xcframework */,
+				AA67DE5F025EDCB24BFA9D6841077620 /* libswresample.xcframework */,
+				7DDF5C61C9D2C86B488364DC999C2CB7 /* libswscale.xcframework */,
+				B8D634456C2E210E0383AE64B6DEEFEF /* libtheora.xcframework */,
+				FB7CD821744EDB2342019E1F7873E2EB /* libtheoradec.xcframework */,
+				5E4E0C0D46338249A0220742FE0D1BF0 /* libtheoraenc.xcframework */,
+				5720DC19D4CC530D40F5D24C75375851 /* libvorbis.xcframework */,
+				62D7F3160F073681A2E43D918F101EEA /* libvorbisenc.xcframework */,
+				109BE396DFA254FCB0DBCE5D88920A14 /* libvorbisfile.xcframework */,
+				4A64959A2897095C4D474503C22A1AEC /* libvpx.xcframework */,
+				AEA2C74F9A7C2D4A5F663C02F357953F /* libwebp.xcframework */,
+				39016955DCCC9052F482F008543D1A0B /* libwebpdemux.xcframework */,
+				7779984E194334578A8E9D54C3519F59 /* libwebpmux.xcframework */,
+				A3A2B1DB2FA3233BF622DD29961D389D /* libxml2.xcframework */,
+				851E7CDF42155C6892A7BD2D8AAAF602 /* mobileffmpeg.xcframework */,
+				ED8EDB79400248882DBA81A074CC4AA9 /* opus.xcframework */,
+				DEFD3C0DC9005DAFA9F7CA4A11618EE0 /* shine.xcframework */,
+				4B11AA310FD8C2F65E8DD40B9E33B1FB /* snappy.xcframework */,
+				09872F36CF69EA505A518699F41E3A6A /* soxr.xcframework */,
+				87403F605D9CBB9F02C0F4FE28A53859 /* speex.xcframework */,
+				BE5F07AE8A74ED99057145A07166FD9F /* tiff.xcframework */,
+				9855F377C9571EA1C68B4E26A5C41A4E /* twolame.xcframework */,
+				9CA20ED7E88E0F7A3CB81C295038A340 /* vo-amrwbenc.xcframework */,
+				AB30E427771E97042DB275099CE4CBAA /* wavpack.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40B8112CB7B3715CAD1AFD716372D471 /* mobile-ffmpeg-full */ = {
+			isa = PBXGroup;
+			children = (
+				3C35AFEAB8715E0562808E3A0699720A /* Frameworks */,
+				BD06ACACEA14B63865A4D644BF36221B /* Support Files */,
+			);
+			name = "mobile-ffmpeg-full";
+			path = "mobile-ffmpeg-full";
+			sourceTree = "<group>";
+		};
+		47DC8E7174F80B1C1E3CD3E6F2B193F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40B8112CB7B3715CAD1AFD716372D471 /* mobile-ffmpeg-full */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		49E276C84FCA84924052F4250758774F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				034D68B18C804DD5C03CC2311A4A86B7 /* Pods_watchFile.framework */,
+				78ABF8C14708FF14224636001811AC02 /* Pods_watchFile_WatchKit_App.framework */,
+				760CAF9AB9B61B278A002F8D03CCCAE1 /* Pods_watchFile_WatchKit_Extension.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		54CCD06893F300F5B2C02DAFD57093E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03FBABE5ACCBF0D21AB61D364299D310 /* iOS */,
+				8B063FB5829CC11F1F48DAAF9305FCB4 /* watchOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B063FB5829CC11F1F48DAAF9305FCB4 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				FCE35B7430FD7C91E8CC808A3540CF2E /* Foundation.framework */,
+			);
+			name = watchOS;
+			sourceTree = "<group>";
+		};
+		AC397E375138E56FDED3AE4909AD59D9 /* Pods-watchFile WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0206C52608A4F41E2A437F342A928278 /* Pods-watchFile WatchKit Extension.modulemap */,
+				6EB9100016F5FAA16C0115006A36F38E /* Pods-watchFile WatchKit Extension-acknowledgements.markdown */,
+				DC27B3B7F383EA4F98FD423939D9B27C /* Pods-watchFile WatchKit Extension-acknowledgements.plist */,
+				B7B4166BA8477277838A996A744B9FF3 /* Pods-watchFile WatchKit Extension-dummy.m */,
+				E41708A425423AE7EBBD12DA15843EC1 /* Pods-watchFile WatchKit Extension-Info.plist */,
+				A71D786B8F62A1E33FC192001F9FC35D /* Pods-watchFile WatchKit Extension-umbrella.h */,
+				7D56D2978D15B7D26E283A40D0B9B1D1 /* Pods-watchFile WatchKit Extension.debug.xcconfig */,
+				85FCD3AED7AC07D02B8384F53FC9CD6C /* Pods-watchFile WatchKit Extension.release.xcconfig */,
+			);
+			name = "Pods-watchFile WatchKit Extension";
+			path = "Target Support Files/Pods-watchFile WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		B6D48E2DC005491879E323CF6B7DC2D0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				144FCF9902DD8E6DD64B290F5E76585A /* Pods-watchFile */,
+				C608E67222CD5E04D0EACCFD36359E6D /* Pods-watchFile WatchKit App */,
+				AC397E375138E56FDED3AE4909AD59D9 /* Pods-watchFile WatchKit Extension */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BD06ACACEA14B63865A4D644BF36221B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4B727DC3BBFE0D14571CE8F61D407AF /* mobile-ffmpeg-full-xcframeworks.sh */,
+				FE7E334A78E7D37D6026796B5EE109C5 /* mobile-ffmpeg-full.debug.xcconfig */,
+				C3ACEF7524BAC805FDEB8529402F6A20 /* mobile-ffmpeg-full.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/mobile-ffmpeg-full";
+			sourceTree = "<group>";
+		};
+		C608E67222CD5E04D0EACCFD36359E6D /* Pods-watchFile WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				8C8BDDBEF8CDCD280390A2D751DFAD8F /* Pods-watchFile WatchKit App.modulemap */,
+				FFCB1A9A2ECDEF75865D3C35294F9427 /* Pods-watchFile WatchKit App-acknowledgements.markdown */,
+				E36BDBD49C29B9E1BE3E4F3599068A2C /* Pods-watchFile WatchKit App-acknowledgements.plist */,
+				CCDD03B6C61BCD63CF6EAC3DEEF8521A /* Pods-watchFile WatchKit App-dummy.m */,
+				F05BC8F343F19E283C35BCE0CF48C8DC /* Pods-watchFile WatchKit App-Info.plist */,
+				B8CEE8562D7CDAAB49B1657C16CD0790 /* Pods-watchFile WatchKit App-umbrella.h */,
+				4488FDDD1D8ED0ACC9252AC03553FE67 /* Pods-watchFile WatchKit App.debug.xcconfig */,
+				67222630E5F1B1750CD8A71ABB1654AF /* Pods-watchFile WatchKit App.release.xcconfig */,
+			);
+			name = "Pods-watchFile WatchKit App";
+			path = "Target Support Files/Pods-watchFile WatchKit App";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				54CCD06893F300F5B2C02DAFD57093E1 /* Frameworks */,
+				47DC8E7174F80B1C1E3CD3E6F2B193F2 /* Pods */,
+				49E276C84FCA84924052F4250758774F /* Products */,
+				B6D48E2DC005491879E323CF6B7DC2D0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		62E2FC12EE59FF3973EA78BBC6D7D3F5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AA016BB61B76840BDB172C071DCCB79 /* Pods-watchFile-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E46233A73A2A9EB59CE72C1ED1C9866 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				676FD761B91ED27B5F3ECF55C9BB65E4 /* Pods-watchFile WatchKit Extension-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAFE165FBBC53DEDB66BFF88C18C4A63 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C30BCF3C59C17859B19A31EB16483DD6 /* Pods-watchFile WatchKit App-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		014E6BCAA7F8E43C1649267AB4FAEAA1 /* Pods-watchFile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D61D396D32D80AECE5287E742EA420B /* Build configuration list for PBXNativeTarget "Pods-watchFile" */;
+			buildPhases = (
+				62E2FC12EE59FF3973EA78BBC6D7D3F5 /* Headers */,
+				19CE9385F50AE149499B4C7930D2285A /* Sources */,
+				C5046500CA566F2519FDD1878AC0F7B8 /* Frameworks */,
+				44DE6DD4C73F5FE4405692495DC204DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1AF092EE5B78F7D32C8066AF079F151A /* PBXTargetDependency */,
+			);
+			name = "Pods-watchFile";
+			productName = "Pods-watchFile";
+			productReference = 034D68B18C804DD5C03CC2311A4A86B7 /* Pods_watchFile.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4C15CF1C69F9B2D169422AC6DDF59687 /* Pods-watchFile WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32B239B45CE5636705F18DBCC13862A5 /* Build configuration list for PBXNativeTarget "Pods-watchFile WatchKit App" */;
+			buildPhases = (
+				CAFE165FBBC53DEDB66BFF88C18C4A63 /* Headers */,
+				625E56A0F146B170CF40A7C2B9DB7F5A /* Sources */,
+				CAAF64AB99434D1BC4B35979A5DC88BE /* Frameworks */,
+				232EBDFC0DB200BAFBB3F030ACF00FA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-watchFile WatchKit App";
+			productName = "Pods-watchFile WatchKit App";
+			productReference = 78ABF8C14708FF14224636001811AC02 /* Pods_watchFile_WatchKit_App.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C8C046B9B9EDA0705CD6D21AD596A023 /* Pods-watchFile WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3C1DC6958B44E9D44138813959F4FD5 /* Build configuration list for PBXNativeTarget "Pods-watchFile WatchKit Extension" */;
+			buildPhases = (
+				7E46233A73A2A9EB59CE72C1ED1C9866 /* Headers */,
+				C8FB4692A39786900A9FDF1CE0C0677D /* Sources */,
+				ECD7A79A058AB0887B20CC2818E4B63D /* Frameworks */,
+				F289AE3374F9900157CCA67621A30230 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-watchFile WatchKit Extension";
+			productName = "Pods-watchFile WatchKit Extension";
+			productReference = 760CAF9AB9B61B278A002F8D03CCCAE1 /* Pods_watchFile_WatchKit_Extension.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 49E276C84FCA84924052F4250758774F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4CF1A2B7EFA48AA7D1DFC45FA6B1E5C /* mobile-ffmpeg-full */,
+				014E6BCAA7F8E43C1649267AB4FAEAA1 /* Pods-watchFile */,
+				4C15CF1C69F9B2D169422AC6DDF59687 /* Pods-watchFile WatchKit App */,
+				C8C046B9B9EDA0705CD6D21AD596A023 /* Pods-watchFile WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		232EBDFC0DB200BAFBB3F030ACF00FA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44DE6DD4C73F5FE4405692495DC204DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F289AE3374F9900157CCA67621A30230 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25DCD786C43D49D3F2ED58F8B404DA05 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/mobile-ffmpeg-full/mobile-ffmpeg-full-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/mobile-ffmpeg-full/mobile-ffmpeg-full-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/mobile-ffmpeg-full/mobile-ffmpeg-full-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19CE9385F50AE149499B4C7930D2285A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB15471ECE83309832303B1CF31D543D /* Pods-watchFile-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		625E56A0F146B170CF40A7C2B9DB7F5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31F5107B1899854D1466FFDDDA3D5B48 /* Pods-watchFile WatchKit App-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8FB4692A39786900A9FDF1CE0C0677D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				816D3E7045CF144C84F3B783C6794932 /* Pods-watchFile WatchKit Extension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1AF092EE5B78F7D32C8066AF079F151A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "mobile-ffmpeg-full";
+			target = A4CF1A2B7EFA48AA7D1DFC45FA6B1E5C /* mobile-ffmpeg-full */;
+			targetProxy = 79D5F37EC7AF02ED4DA3F021734C727A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		15B295C2FCEFB77CB7C502D25C348438 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E81E63DA8E2707DA96AE0EBF810EF3E /* Pods-watchFile.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-watchFile/Pods-watchFile-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-watchFile/Pods-watchFile.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		15E9885A7DE59E23E5CF3427E040D0AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3ACEF7524BAC805FDEB8529402F6A20 /* mobile-ffmpeg-full.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		46CA4FE497C9F895EF3DC642B02E898F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BFAA5E04A1A134E4E0E60C9BA1C5EBC /* Pods-watchFile.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-watchFile/Pods-watchFile-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-watchFile/Pods-watchFile.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		499B9A7A2310A836E113E8B441873A7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D56D2978D15B7D26E283A40D0B9B1D1 /* Pods-watchFile WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-watchFile WatchKit Extension/Pods-watchFile WatchKit Extension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-watchFile WatchKit Extension/Pods-watchFile WatchKit Extension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		5ECE41A755A062B75E0545BCA8340B6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE7E334A78E7D37D6026796B5EE109C5 /* mobile-ffmpeg-full.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6865CBDD8D22108AC0D774294DFD3ADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		A14B145F4D75072A4EFD977B9DB00399 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67222630E5F1B1750CD8A71ABB1654AF /* Pods-watchFile WatchKit App.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-watchFile WatchKit App/Pods-watchFile WatchKit App-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-watchFile WatchKit App/Pods-watchFile WatchKit App.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		C021D81DADCB92D8155160C6B5CA8B91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4488FDDD1D8ED0ACC9252AC03553FE67 /* Pods-watchFile WatchKit App.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-watchFile WatchKit App/Pods-watchFile WatchKit App-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-watchFile WatchKit App/Pods-watchFile WatchKit App.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		D2A931812485616761836372C10C5DD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85FCD3AED7AC07D02B8384F53FC9CD6C /* Pods-watchFile WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-watchFile WatchKit Extension/Pods-watchFile WatchKit Extension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-watchFile WatchKit Extension/Pods-watchFile WatchKit Extension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		DF893AE5FAC31C6150ECB7AC2AF65D38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		32B239B45CE5636705F18DBCC13862A5 /* Build configuration list for PBXNativeTarget "Pods-watchFile WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C021D81DADCB92D8155160C6B5CA8B91 /* Debug */,
+				A14B145F4D75072A4EFD977B9DB00399 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF893AE5FAC31C6150ECB7AC2AF65D38 /* Debug */,
+				6865CBDD8D22108AC0D774294DFD3ADA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		797E3892A9E731F1BE505B941C2067A6 /* Build configuration list for PBXAggregateTarget "mobile-ffmpeg-full" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ECE41A755A062B75E0545BCA8340B6A /* Debug */,
+				15E9885A7DE59E23E5CF3427E040D0AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D61D396D32D80AECE5287E742EA420B /* Build configuration list for PBXNativeTarget "Pods-watchFile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15B295C2FCEFB77CB7C502D25C348438 /* Debug */,
+				46CA4FE497C9F895EF3DC642B02E898F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3C1DC6958B44E9D44138813959F4FD5 /* Build configuration list for PBXNativeTarget "Pods-watchFile WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				499B9A7A2310A836E113E8B441873A7A /* Debug */,
+				D2A931812485616761836372C10C5DD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
