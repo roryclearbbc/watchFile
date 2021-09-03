@@ -46,11 +46,38 @@ class ViewController: UIViewController {
     }
     
     func ffmpegDownload(){
-        let documentsUrl:URL =  (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first as URL?)!
-        let destinationFileUrl = documentsUrl.appendingPathComponent("ffmpegFile.mp4")
-        let stringPath = "\(destinationFileUrl)"
+        let data: Data? = "roryclear".data(using: .utf8)
+        let path = FileManager.default.urls(for: .documentDirectory,
+                                                in: .userDomainMask)[0].appendingPathComponent("ffmpegFile.mp4")
         
-        var command = "-i https://vod-hls-uk.live.cf.md.bbci.co.uk/usp/auth/vod/piff_abr_full_hd/99f2f2-p09tv3z0/vf_p09tv3z0_8e28d952-3729-4f5b-b383-f42e1bd65b3f.ism/vf_p09tv3z0_8e28d952-3729-4f5b-b383-f42e1bd65b3f-audio_eng=96000-video=827000.m3u8 -bsf:a aac_adtstoasc -vcodec copy -c copy -y -crf 50 "
+        do {
+           try data!.write(to: path)
+        } catch let error as NSError {
+           print (error)
+        }
+        
+        let stringPath = "\(path)"
+        
+        var fileSize : UInt64
+        
+        //delete
+        do {
+            //return [FileAttributeKey : Any]
+            let attr = try FileManager.default.attributesOfItem(atPath: stringPath)
+            fileSize = attr[FileAttributeKey.size] as! UInt64
+
+            //if you convert to NSDictionary, you can get file size old way as well.
+            let dict = attr as NSDictionary
+            fileSize = dict.fileSize()
+            print("roryclear file size (BEFORE) = ",fileSize)
+        } catch {
+            print("Error: \(error)")
+        }
+        //
+        
+        var command = "-i https://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/99f2f2-p09tv3z0/vf_p09tv3z0_8e28d952-3729-4f5b-b383-f42e1bd65b3f.ism/vf_p09tv3z0_8e28d952-3729-4f5b-b383-f42e1bd65b3f-audio_eng=48000-video=281000.m3u8 -bsf:a aac_adtstoasc -vcodec copy -c copy -y -crf 50 "
+        
+        //better quality: https://vod-hls-uk.live.cf.md.bbci.co.uk/usp/auth/vod/piff_abr_full_hd/99f2f2-p09tv3z0/vf_p09tv3z0_8e28d952-3729-4f5b-b383-f42e1bd65b3f.ism/vf_p09tv3z0_8e28d952-3729-4f5b-b383-f42e1bd65b3f-audio_eng=96000-video=827000.m3u8
         
         command = command + stringPath
         
@@ -60,9 +87,7 @@ class ViewController: UIViewController {
         let a = MobileFFmpeg.execute(command)
         
         //check file size???
-        
-        var fileSize : UInt64
-
+        /*
         do {
             //return [FileAttributeKey : Any]
             let attr = try FileManager.default.attributesOfItem(atPath: stringPath)
@@ -73,19 +98,24 @@ class ViewController: UIViewController {
             fileSize = dict.fileSize()
             print("roryclear file size = ",fileSize)
         } catch {
-            print("Error: \(error)")
+            print("roryclear ffs Error: \(error)")
         }
+ */
+        print("roryclear file downloaded?")
+        
+        
     }
     
     
     @IBAction func tapSendDataToWatch(_ sender: Any) {
         print("roryclear send2watch?")
-    
         
         //delete original file??
         deleteAllMp4s()
         
+        
         //download mp4
+        /*
         let documentsUrl:URL =  (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first as URL?)!
         let destinationFileUrl = documentsUrl.appendingPathComponent("iPhoneFile.mp4")
         
@@ -114,15 +144,16 @@ class ViewController: UIViewController {
             } else {
                 print("Error took place while downloading a file. Error description: %@", error?.localizedDescription);
             }
-            
+            */
             if let validSession = self.session, validSession.isReachable {//5.1
                 print("roryclear validSession?")
+                ffmpegDownload()
              // let data: [String: Any] = ["iPhone": "Data from iPhone" as Any] // Create your Dictionay as per uses
              //   NSString  *filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory,@"filename.mp4"];
                 let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
                 let documentsDirectory = paths[0]
-                let path: String = "\(documentsDirectory)iPhoneFile.mp4"
-                let pathURL = URL(string: path)
+                let pathURL = FileManager.default.urls(for: .documentDirectory,
+                                                    in: .userDomainMask)[0].appendingPathComponent("ffmpegFile.mp4")
                 
                 do {
              //       let data: [String: Any] = ["iPhone": try Data.init(contentsOf: URL(string: path)!)] //video data...too large (> 65KB)
@@ -134,20 +165,24 @@ class ViewController: UIViewController {
                     
                     //transfer file not data???
                     print("roryclear file transfer started")
-                    validSession.transferFile(pathURL!, metadata: ["iPhone":"hello rory \(Int.random(in: 1..<10000))"])
+                    validSession.transferFile(pathURL, metadata: ["iPhone":"hello rory \(Int.random(in: 1..<10000))"])
                     var progress: Int64 = -1
                     if(self.session?.outstandingFileTransfers != nil)
                     {
-                        while (self.session?.outstandingFileTransfers.count)! > 0 && (self.session?.outstandingFileTransfers[0].progress.completedUnitCount)! < 100 {
-                            if(self.session?.outstandingFileTransfers[0].progress.completedUnitCount != progress)
+                            while (self.session?.outstandingFileTransfers.count)! > 0 && (self.session?.outstandingFileTransfers[0].progress.completedUnitCount)! < 100 {
+                                if let oft = self.session?.outstandingFileTransfers[0]
+                                {
+                                    print("roryclear downloading \(oft.progress.completedUnitCount)")
+                                }
+          /*                  if(self.session?.outstandingFileTransfers[0].progress.completedUnitCount != progress)
                             {
-                                print("roryclear trasfer prog? -> \(self.session!.outstandingFileTransfers[0].progress.completedUnitCount)%")
+                                print("roryclear transfer prog? -> \(self.session!.outstandingFileTransfers[0].progress.completedUnitCount)%")
                                 DispatchQueue.main.async {
                                 self.percentLabel.text = "\(self.session!.outstandingFileTransfers[0].progress.completedUnitCount)%"
                                 }
                                 progress = (self.session?.outstandingFileTransfers[0].progress.completedUnitCount)!
                             }
-                        
+                       */
                     }
                     }
                     
@@ -164,8 +199,8 @@ class ViewController: UIViewController {
                 print("roryclear NO VALID SESSION")
             }
             
-        }
-        task.resume()
+  //      }
+ //               task.resume()
     }
     
 }
