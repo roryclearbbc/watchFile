@@ -28,12 +28,7 @@ class ViewController: UIViewController {
       }
     }
     
-    
-    @IBAction func tapSendDataToWatch(_ sender: Any) {
-        print("roryclear send2watch?")
-    
-        
-        //delete original file??
+    func deleteAllMp4s(){
         let documentsUrl0 =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
 
         do {
@@ -46,6 +41,16 @@ class ViewController: UIViewController {
                 }
             }
         } catch  { print(error) }
+        
+    }
+    
+    
+    @IBAction func tapSendDataToWatch(_ sender: Any) {
+        print("roryclear send2watch?")
+    
+        
+        //delete original file??
+        deleteAllMp4s()
         
         //download mp4
         let documentsUrl:URL =  (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first as URL?)!
