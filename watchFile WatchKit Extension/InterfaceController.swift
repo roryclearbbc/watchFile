@@ -26,16 +26,7 @@ class InterfaceController: WKInterfaceController {
         session.activate()//**5
     }
     
-    override func willActivate() {
-        super.willActivate()
-        // This method is called when watch view controller is about to be visible to user
-        print("roryclear willActivate??")
-    //    let movie = Bundle.main.url(forResource: "fred", withExtension: "mp4")!
-    //    self.moviePlayer.setMovieURL(movie)
-        
-        
-        //delete original file???
-        //delete original file??
+    func deleteAllMp4s(){
         let documentsUrl0 =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
 
         do {
@@ -48,6 +39,14 @@ class InterfaceController: WKInterfaceController {
                 }
             }
         } catch  { print(error) }
+    }
+    
+    override func willActivate() {
+        super.willActivate()
+        // This method is called when watch view controller is about to be visible to user
+        print("roryclear willActivate??")
+    //    let movie = Bundle.main.url(forResource: "fred", withExtension: "mp4")!
+    //    self.moviePlayer.setMovieURL(movie)
         
         
         //download mp4
