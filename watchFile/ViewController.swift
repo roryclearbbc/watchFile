@@ -172,7 +172,7 @@ class ViewController: UIViewController {
                             while (self.session?.outstandingFileTransfers.count)! > 0 && (self.session?.outstandingFileTransfers[0].progress.completedUnitCount)! < 100 {
                                 if let oft = self.session?.outstandingFileTransfers[0]
                                 {
-                                    print("roryclear downloading \(oft.progress.totalUnitCount)")
+                                    print("roryclear downloading \(oft.progress.completedUnitCount)")
                                 }
           /*                  if(self.session?.outstandingFileTransfers[0].progress.completedUnitCount != progress)
                             {
