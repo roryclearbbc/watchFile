@@ -10,6 +10,7 @@ import WatchConnectivity
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var percentLabel: UILabel!
     var session: WCSession?
 
     override func viewDidLoad() {
@@ -102,13 +103,20 @@ class ViewController: UIViewController {
                         while (self.session?.outstandingFileTransfers.count)! > 0 && (self.session?.outstandingFileTransfers[0].progress.completedUnitCount)! < 100 {
                             if(self.session?.outstandingFileTransfers[0].progress.completedUnitCount != progress)
                             {
-                            print("roryclear trasfer prog? -> \(self.session?.outstandingFileTransfers[0].progress.completedUnitCount)")
+                                print("roryclear trasfer prog? -> \(self.session!.outstandingFileTransfers[0].progress.completedUnitCount)%")
+                                DispatchQueue.main.async {
+                                self.percentLabel.text = "\(self.session!.outstandingFileTransfers[0].progress.completedUnitCount)%"
+                                }
                                 progress = (self.session?.outstandingFileTransfers[0].progress.completedUnitCount)!
                             }
                         
                     }
                     }
-    
+                    
+                    DispatchQueue.main.async {
+                    self.percentLabel.text = "100%"
+                    }
+                    
                     print("roryclear file transfered?")
                     
                 } catch {
