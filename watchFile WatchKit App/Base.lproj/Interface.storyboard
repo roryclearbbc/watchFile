@@ -12,7 +12,12 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watchFile_WatchKit_App" customModuleProvider="target">
                     <items>
                         <label alignment="left" text="Label" id="iDv-Ca-pMI"/>
-                        <movie width="1" height="100" alignment="left" id="TYO-dG-3kX"/>
+                        <movie width="134" height="91" alignment="left" id="TYO-dG-3kX"/>
+                        <button width="1" alignment="left" title="Delete" id="s3g-tE-fIF">
+                            <connections>
+                                <action selector="delete" destination="AgC-eL-Hgc" id="apO-5f-U0s"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="label" destination="iDv-Ca-pMI" id="ZTd-0F-PKY"/>

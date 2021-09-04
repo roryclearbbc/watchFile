@@ -26,6 +26,10 @@ class InterfaceController: WKInterfaceController {
         session.activate()//**5
     }
     
+    @IBAction func delete() {
+            deleteAllMp4s()
+    }
+    
     func deleteAllMp4s(){
         let documentsUrl0 =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
 
@@ -117,9 +121,7 @@ extension InterfaceController: WCSessionDelegate {
     
     func session(_ session: WCSession, didReceive file: WCSessionFile) {
         do {
-            deleteAllMp4s()
             let receivedData = try Data(contentsOf: file.fileURL)
-            
             let path = FileManager.default.urls(for: .documentDirectory,
                                                     in: .userDomainMask)[0].appendingPathComponent("receivedFileFromiPhone.mp4")
             try? receivedData.write(to: path)
