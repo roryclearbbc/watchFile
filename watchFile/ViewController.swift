@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var percentLabel: UILabel!
     var session: WCSession?
 
+    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -109,6 +111,11 @@ class ViewController: UIViewController {
     
     @IBAction func tapSendDataToWatch(_ sender: Any) {
         print("roryclear send2watch?")
+        
+        var userText: String
+        userText = textField.text!
+        print("roryclear userText = \(userText)")
+        
         
         //download mp4
         /*
