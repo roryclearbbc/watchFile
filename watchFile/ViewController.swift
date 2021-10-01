@@ -9,6 +9,12 @@ import UIKit
 import WatchConnectivity
 import mobileffmpeg
 
+extension UIApplication {
+    func endEditing() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var percentLabel: UILabel!
@@ -111,6 +117,8 @@ class ViewController: UIViewController {
     
     @IBAction func tapSendDataToWatch(_ sender: Any) {
         print("roryclear send2watch?")
+        
+        UIApplication.shared.endEditing()
         
         var userText: String
         userText = textField.text!
