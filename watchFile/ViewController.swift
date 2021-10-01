@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         
     }
     
-    func ffmpegDownload(){
+    func ffmpegDownload(link: String){
         let data: Data? = "roryclear".data(using: .utf8)
         let path = FileManager.default.urls(for: .documentDirectory,
                                                 in: .userDomainMask)[0].appendingPathComponent("ffmpegFile.mp4")
@@ -77,7 +77,7 @@ class ViewController: UIViewController {
         }
         //
         
-        var command = "-i https://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/99f2f2-p09tv3z0/vf_p09tv3z0_8e28d952-3729-4f5b-b383-f42e1bd65b3f.ism/vf_p09tv3z0_8e28d952-3729-4f5b-b383-f42e1bd65b3f-audio_eng=48000-video=281000.m3u8 -bsf:a aac_adtstoasc -vcodec copy -c copy -y -crf 50 "
+        var command = "-i \(link) -bsf:a aac_adtstoasc -vcodec copy -c copy -y -crf 50 "
         
         //better quality: https://vod-hls-uk.live.cf.md.bbci.co.uk/usp/auth/vod/piff_abr_full_hd/99f2f2-p09tv3z0/vf_p09tv3z0_8e28d952-3729-4f5b-b383-f42e1bd65b3f.ism/vf_p09tv3z0_8e28d952-3729-4f5b-b383-f42e1bd65b3f-audio_eng=96000-video=827000.m3u8
         
@@ -116,6 +116,11 @@ class ViewController: UIViewController {
         userText = textField.text!
         print("roryclear userText = \(userText)")
         
+        if(userText.count == 0)
+        {
+            print("roryclear link not entered")
+            return
+        }
         
         //download mp4
         /*
@@ -154,7 +159,7 @@ class ViewController: UIViewController {
                 //delete original file??
                 deleteAllMp4s()
                 //download mp4
-                ffmpegDownload()
+                ffmpegDownload(link: userText)
              // let data: [String: Any] = ["iPhone": "Data from iPhone" as Any] // Create your Dictionay as per uses
              //   NSString  *filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory,@"filename.mp4"];
                 let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
