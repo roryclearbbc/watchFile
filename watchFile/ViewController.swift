@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder() // Dismiss the keyboard
-        //code
+        attemptDownload()
         return true
     }
 
@@ -121,12 +121,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    
-    @IBAction func tapSendDataToWatch(_ sender: Any) {
-        print("roryclear send2watch?")
-        
-        UIApplication.shared.endEditing()
-        
+    func attemptDownload()
+    {
         var userText: String
         userText = textField.text!
         print("roryclear userText = \(userText)")
@@ -229,6 +225,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
   //      }
  //               task.resume()
+    }
+    
+    @IBAction func tapSendDataToWatch(_ sender: Any) {
+        print("roryclear send2watch?")
+        
+        UIApplication.shared.endEditing()
+        
+        attemptDownload()
     }
     
 }
