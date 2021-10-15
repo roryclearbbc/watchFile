@@ -15,7 +15,7 @@ extension UIApplication {
     }
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var percentLabel: UILabel!
     var session: WCSession?
@@ -26,6 +26,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.configureWatchKitSesstion()
+        textField.delegate = self //???
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // Dismiss the keyboard
+        //code
+        return true
     }
 
     func configureWatchKitSesstion() {
